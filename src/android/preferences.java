@@ -3,6 +3,9 @@ package com.portnou.cordova.plugin.preferences;
 
 import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.CallbackContext;
+import org.apache.cordova.CordovaInterface;
+import org.apache.cordova.CordovaWebView;
+
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -27,7 +30,7 @@ public class Preferences extends CordovaPlugin {
         context = super.cordova.getActivity().getApplicationContext();
         sharedpreferences = context.getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
     }
-    
+
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
         if (action.equals("getValue")) {
@@ -41,7 +44,7 @@ public class Preferences extends CordovaPlugin {
             this.put(key, value, callbackContext);
             return true;
         }
-        
+
         return false;
     }
 
