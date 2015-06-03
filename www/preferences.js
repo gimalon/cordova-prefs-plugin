@@ -9,5 +9,16 @@ Preferences.put = function(key, value, success, error) {
 };
 
 Preferences.get = function(key, success, error) {
-    exec(success, error, "Preferences", "getValue", [key]);
+    suc = function(value) {
+      if(value === "" ) {
+        return success(null)
+      }
+      try {
+        str = JSON.parse(value)
+        return success(str)
+      } catch (e) {
+        return error(e)
+      }
+    }
+    exec(suc, error, "Preferences", "getValue", [key]);
 };
