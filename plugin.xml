@@ -27,7 +27,7 @@
                 <param name="android-package" value="com.portnou.cordova.plugin.preferences.Preferences"/>
             </feature>
         </config-file>
-        <source-file src="src/android/preferences.java" target-dir="src/com/portnou/cordova/plugin/preferences" />
+        <source-file src="src/android/Preferences.java" target-dir="src/com/portnou/cordova/plugin/Preferences" />
 
     </platform>
 
