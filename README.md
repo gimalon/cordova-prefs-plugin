@@ -1,6 +1,11 @@
 Cordova Preferences plugin v 1.0.0
 =============
 
+*This is a modified version to Alex Portnoy's version. Changes are:*
+- Original plugin did not return JSON
+- Original version got stuck in a Mutex Wait on IOS when storing a NULL value
+
+
 This plugin enables your app to store small pieces of data like app settings and preferences in device's persistent storage in a key-value manner.
 On iOS plugin uses NSUserDefaults, on Android - SharedPreferences features.
 All values are stored as a JSON strings on save and converted back to their respective types upon loading.
